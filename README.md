@@ -39,3 +39,16 @@ complete_at - DateTime when task was completed
 
 
 17/08/2023   creating Models and migrations for User, Category, Task
+
+18/08/2023  
+            updating the models 
+            creating Enumes   
+                           proirity.php
+                           status.php
+             Factories:
+                    Category
+                    Task
+                    user
+             Seeders
+             finally solving all the migrations errors.                           
+

@@ -1,6 +1,6 @@
 <?php
 declare (strict_types=1);
-namespace app\Enume;
+namespace App\Enums;
 
 
 enum Status: string

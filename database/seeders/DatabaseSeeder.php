@@ -1,9 +1,11 @@
 <?php
-
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Task;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Database\Factories\CategoryFactory;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $userCount = 10; // Number of random users to create
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory()->count($userCount)->create()->each(function ($user) {
+            Task::factory()->count(rand(5, 10))->create(['user_id' => $user->id]);
+        });
     }
 }
